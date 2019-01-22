@@ -1,6 +1,6 @@
 # Table of contents
 
-* [development notes](README.md)
+* [dev](README.md)
 * [docker](docker/README.md)
   * [SQL Server](docker/sql-server.md)
   * [commands](docker/commands.md)
