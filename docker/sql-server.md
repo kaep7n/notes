@@ -17,7 +17,7 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=A123456!" -p 1433:1433 --name sql-
 ```
 
 {% hint style="info" %}
-Run Powershell as elevated
+elevated privileges are required
 {% endhint %}
 
 Change sa password
@@ -28,8 +28,15 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "A123456!
 
 Run sqlcmd in container
 
+* Run bash in container
+
 ```
-docker exec -it sql1 "bash"
+docker exec -it sql-dev "bash"
+```
+
+* Run sqlcmd in from bash
+
+```text
 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'A123456!'
 ```
 
