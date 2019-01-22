@@ -2,6 +2,7 @@
 
 * [development notes](README.md)
 * [docker](docker/README.md)
+  * [SQL Server](docker/sql-server.md)
   * [commands](docker/commands.md)
 * [git](git/README.md)
   * [config](git/config.md)
