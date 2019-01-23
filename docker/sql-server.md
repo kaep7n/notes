@@ -13,7 +13,7 @@ docker pull mcr.microsoft.com/mssql/server:2017-latest
 Run Image with port 1433 and volume mount C:\dev\sql
 
 ```
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=A123456!" -p 1433:1433 -v C:\dev\sql:/var/opt/mssql --name sql-dev -d mcr.microsoft.com/mssql/server:2017-latest
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=A123456!" -p 1433:1433 -v C:\dev\sql\data:/var/opt/mssql/data --name sql-dev -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
 {% hint style="info" %}
