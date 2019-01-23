@@ -43,6 +43,8 @@ docker exec -it sql-dev "bash"
 Connect to SQL Server from outside
 
 {% hint style="info" %}
-Use the host ip with the port, for example 192.168.10.206,1433 and the sa login
+Use the host ip or with the port, for example 192.168.10.206,1433 or localhost,1433 \(the port that was used to run the image\) and the sa login
 {% endhint %}
+
+
 
