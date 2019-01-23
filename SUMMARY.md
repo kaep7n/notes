@@ -12,4 +12,5 @@
   * [custom validation](asp.net-core/custom-validation.md)
 * [linux](linux/README.md)
   * [commands](linux/commands.md)
+* [windows](windows.md)
 
