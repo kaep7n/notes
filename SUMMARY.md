@@ -1,9 +1,9 @@
 # Table of contents
 
 * [dev](README.md)
-* [docker](docker/README.md)
-  * [SQL Server](docker/sql-server.md)
-  * [commands](docker/commands.md)
+* [docker](dev-docker/README.md)
+  * [SQL Server](dev-docker/sql-server.md)
+  * [commands](dev-docker/commands.md)
 * [git](git/README.md)
   * [config](git/config.md)
   * [commands](git/commands.md)
@@ -17,4 +17,7 @@
 * [linux](linux/README.md)
   * [commands](linux/commands.md)
 * [windows](windows.md)
+* [environment](environment/README.md)
+  * [visual studio](environment/visual-studio/README.md)
+    * [extensions](environment/visual-studio/extensions.md)
 
