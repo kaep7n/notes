@@ -4,6 +4,8 @@ description: Pull and run a SQL Server in Docker
 
 # SQL Server
 
+## docker
+
 Pull Image
 
 ```text
@@ -25,6 +27,29 @@ Change sa password
 ```text
 docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "A123456!" -Q "ALTER LOGIN SA WITH PASSWORD='B123456!'"
 ```
+
+## docker-compose
+
+use a docker compose file
+
+```yaml
+version: "3.7"
+services:
+  mssql:
+    container_name: mssql-dev
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    volumes: 
+      - C:\dev\sql\data:/var/opt/mssql/data
+      - C:\dev\sql\backups:/var/backups
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=A123456!
+    ports:
+      - 1433:1433
+
+```
+
+## commands
 
 Run sqlcmd in container
 
