@@ -49,6 +49,10 @@ services:
 
 ```
 
+```text
+docker-compose -f mssql.yaml up -d
+```
+
 ## commands
 
 Run sqlcmd in container
