@@ -14,7 +14,12 @@ the following config configures NLog to log to a file and prints colored message
         name="logfile"
         xsi:type="File"
         fileName="file.log"
-        layout="${longdate}|${pad:padding=5:inner=${level:uppercase=true}}|${message} ${onexception:${newline}  ${exception:format=ToString}}" />
+        layout="${longdate}|${pad:padding=5:inner=${level:uppercase=true}}|${message} ${onexception:${newline}  ${exception:format=ToString}}" 
+        archiveFileName="logs/log.{#}.log"
+        archiveNumbering="Date"
+        archiveEvery="Day"
+        archiveDateFormat="yyyyMMdd"
+        maxArchiveFiles="7"/>
     <target
         name="console"
         xsi:type="Console"
