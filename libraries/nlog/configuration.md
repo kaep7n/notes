@@ -13,7 +13,7 @@ the following config configures NLog to log to a file and prints colored message
     <target
         name="logfile"
         xsi:type="File"
-        fileName="file.log"
+        fileName="logs/file.log"
         layout="${longdate}|${pad:padding=5:inner=${level:uppercase=true}}|${message} ${onexception:${newline}  ${exception:format=ToString}}" 
         archiveFileName="logs/log.{#}.log"
         archiveNumbering="Date"
@@ -24,13 +24,11 @@ the following config configures NLog to log to a file and prints colored message
         name="console"
         xsi:type="Console"
         layout="${longdate}|${pad:padding=5:inner=${level:uppercase=true}}|${message} ${onexception:${newline}  ${exception:format=ToString}}" />
-
     <target
         name="colourconsole"
         xsi:type="ColoredConsole"
         layout="${longdate}|${pad:padding=5:inner=${level:uppercase=true}}|${message} ${onexception:${newline}  ${exception:format=ToString}}"
         useDefaultRowHighlightingRules="true">
-
         <highlight-word backgroundColor="Yellow" foregroundColor="Black" ignoreCase="false" text="ERROR" wholeWords="true" />
         <highlight-word backgroundColor="Red" foregroundColor="White" ignoreCase="false" text="FATAL" wholeWords="true" />
     </target>
