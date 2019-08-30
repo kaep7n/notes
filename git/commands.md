@@ -50,3 +50,29 @@ revert specific commit without creating a new commit
 $ git revert 1ef414875a40eb5336ecb7f74da550af0d2f51dc --no-commit
 ```
 
+## remove all tags \(local & remote\)
+
+ **Delete All local tags**. \(Optional Recommended\) 
+
+```text
+git tag -d $(git tag -l)
+```
+
+Fetch **remote All tags**. \(Optional Recommended\)
+
+```text
+git fetch
+```
+
+**Delete All remote tags**.
+
+```text
+git push origin --delete $(git tag -l)
+```
+
+ **Delete All local tags**. 
+
+```text
+git tag -d $(git tag -l)
+```
+
