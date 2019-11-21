@@ -12,6 +12,8 @@
   * [nlog](libraries/nlog/README.md)
     * [configuration](libraries/nlog/configuration.md)
 * [asp.net core](asp.net-core/README.md)
+  * [authentication](asp.net-core/authentication/README.md)
+    * [kerberos](asp.net-core/authentication/kerberos.md)
   * [startup](asp.net-core/startup.md)
   * [custom validation](asp.net-core/custom-validation.md)
 * [linux](linux/README.md)
