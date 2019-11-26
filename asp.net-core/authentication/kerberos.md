@@ -31,6 +31,25 @@ app.UseAuthentication();
 
 After the authentication is configured correctly add an \[Authorize\] Attribute wherever it is required.
 
+#### Debugging
+
+When using IISExpress you might see this Exception
+
+> InvalidOperationException: The Negotiate Authentication handler cannot be used on a server that directly supports Windows Authentication. Enable Windows Authentication for the server and the Negotiate Authentication handler will defer to it.
+
+Make sure that the IIS settings launchsettings.json are configured properly and windows authentication is enabled
+
+```text
+"iisSettings": {
+    "windowsAuthentication": true, 
+    "anonymousAuthentication": true, 
+    "iisExpress": {
+      "applicationUrl": "http://localhost:49645",
+      "sslPort": 0
+    }
+  }
+```
+
 ## Windows
 
 A prerequisite of using this approach on Windows is to add a SPN \(Service Principal Name\) to the User that is running the Service \(not the Machine Account\)
