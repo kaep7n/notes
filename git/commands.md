@@ -32,8 +32,16 @@ $ git remote add adestis https://gitlab.adestis.net/adestis/Adestis.Services.Cat
 
 Delete all merged branches except master
 
+bash
+
 ```bash
 $ git branch --merged | egrep -v "(^\*|master)" | xargs git branch -d
+```
+
+Powershell
+
+```bash
+$ git branch | %{ $_.Trim() } | ?{ $_ -ne 'master' } | %{ git branch -D $_ }
 ```
 
 ## revert
